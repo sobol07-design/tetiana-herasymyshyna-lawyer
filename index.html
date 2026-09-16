@@ -20,16 +20,27 @@
       }
     }
   </script>
+  <style>
+    @keyframes aurora {
+      0%, 100% { transform: translate3d(-7%, -4%, 0) scale(.9); opacity: .38; }
+      50% { transform: translate3d(8%, 8%, 0) scale(1.18); opacity: .72; }
+    }
+    .aurora { animation: aurora 9s ease-in-out infinite alternate; }
+    .aurora-delay { animation-delay: -4.5s; }
+  </style>
 </head>
 <body class="bg-mist font-sans text-slate-900 antialiased">
   <section class="relative isolate overflow-hidden bg-violet text-white">
     <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_25%_18%,rgba(213,169,66,.22),transparent_25%),linear-gradient(112deg,#621b5b_0%,#4c1649_45%,#260d2f_100%)]"></div>
+    <div aria-hidden="true" class="aurora absolute -left-32 top-8 h-80 w-80 rounded-full bg-fuchsia-300/20 blur-3xl"></div>
+    <div aria-hidden="true" class="aurora aurora-delay absolute right-[-9rem] top-24 h-96 w-96 rounded-full bg-gold/20 blur-3xl"></div>
+    <div aria-hidden="true" class="aurora absolute bottom-[-12rem] left-[30%] h-80 w-80 rounded-full bg-indigo-400/20 blur-3xl"></div>
     <div aria-hidden="true" class="absolute -left-24 top-24 h-72 w-72 rounded-full border border-gold/30"></div>
     <div aria-hidden="true" class="absolute -left-6 top-40 h-56 w-56 rounded-full border border-white/10"></div>
     <header class="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row">
       <a href="/" class="flex items-center gap-3" aria-label="Головна сторінка">
         <span class="flex h-11 w-11 items-center justify-center rounded-xl border border-gold/80 bg-aubergine font-heading text-base font-bold text-gold">ТГ</span>
-        <span><strong class="block font-heading text-sm tracking-wide text-white">ГЕРАСИМИШИНА ТЕТЯНА</strong><small class="mt-0.5 block text-[10px] font-semibold uppercase tracking-[.18em] text-gold">Адвокат • м. Вінниця</small></span>
+        <span><strong class="block font-heading text-sm tracking-wide text-white">ГЕРАСИМИШИНА ТЕТЯНА ВІТАЛІЇВНА</strong><small class="mt-0.5 block text-[10px] font-semibold uppercase tracking-[.18em] text-gold">Адвокат • м. Вінниця</small></span>
       </a>
       <a href="tel:+380677316946" class="rounded-full border border-gold/70 bg-gold px-5 py-2.5 text-xs font-bold tracking-wide text-aubergine shadow-lg transition hover:-translate-y-0.5 hover:bg-cream">+38 (067) 731-69-46</a>
     </header>
@@ -47,7 +58,6 @@
         <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_55%_28%,rgba(213,169,66,.32),transparent_38%),linear-gradient(145deg,rgba(255,255,255,.06),transparent_45%)]"></div>
         <div aria-hidden="true" class="absolute inset-5 rounded-[1.5rem] border border-gold/20"></div>
         <img src="/assets/lady-justice-gold.png" alt="Золотий символ правосуддя" class="relative h-full w-full object-contain mix-blend-screen drop-shadow-[0_18px_24px_rgba(0,0,0,.45)] transition duration-700 hover:scale-105" />
-        <p class="absolute bottom-7 left-0 right-0 text-center font-heading text-[10px] font-bold uppercase tracking-[.28em] text-gold">Захист. Гідність. Право.</p>
       </div>
     </div>
   </section>
