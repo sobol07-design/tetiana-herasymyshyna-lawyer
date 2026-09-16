@@ -1,51 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Адвокат Тетяна Герасимишина — правовий супровід і судове представництво у Вінниці." />
-    <title>Тетяна Герасимишина — адвокат у Вінниці</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адвокат Вінниця — Герасимишина Тетяна Віталіївна</title>
+    
+    <!-- Підключення шрифтів (залишив тільки Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Підключення Tailwind CSS через CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <section class="min-h-screen bg-slate-950 font-sans text-slate-100 antialiased">
-      <header class="mx-auto flex max-w-6xl items-center justify-between border-b border-slate-800/80 px-6 py-4">
-        <div class="flex items-center space-x-3">
-          <div class="flex h-10 w-10 items-center justify-center rounded-full border border-amber-600/40 font-serif text-lg font-bold text-amber-500">ГТ</div>
-          <div>
-            <span class="block font-serif text-sm font-semibold tracking-wide">ТЕТЯНА ГЕРАСИМИШИНА</span>
-            <span class="text-xs text-slate-400">Адвокат • м. Вінниця • Реєстр ЄРАУ</span>
-          </div>
-        </div>
-        <a href="tel:+380677316946" class="rounded border border-amber-600/60 px-4 py-2 text-xs font-medium uppercase tracking-wider text-amber-400 transition hover:bg-amber-600 hover:text-white">+38 (067) 731-69-46</a>
-      </header>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased font-sans">
+  
+  <!-- Шапка сайту (Header) -->
+  <header class="border-b border-slate-800/80 px-6 py-4 max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full border border-amber-600/40 flex items-center justify-center text-amber-500 font-sans font-bold text-lg">
+        ГТ
+      </div>
+      <div>
+        <span class="font-sans tracking-wider block font-bold text-sm">ГЕРАСИМИШИНА ТЕТЯНА ВІТАЛІЇВНА</span>
+        <span class="text-xs text-slate-400">Адвокат • м. Вінниця • Реєстр ЄРАУ</span>
+      </div>
+    </div>
+    <a href="tel:+380677316946" class="px-4 py-2 border border-amber-600/60 text-amber-400 hover:bg-amber-600 hover:text-white transition text-xs tracking-wider uppercase font-medium rounded">
+      +38 (067) 731-69-46
+    </a>
+  </header>
 
-      <main class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 lg:grid-cols-12">
-        <div class="space-y-6 lg:col-span-7">
-          <div class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900 px-3 py-1 text-xs text-amber-400"><span class="h-2 w-2 rounded-full bg-amber-500"></span>Офіційна адвокатська діяльність</div>
-          <h1 class="font-serif text-3xl font-normal leading-tight text-white md:text-5xl">Професійний судовий захист та правовий супровід у Вінниці</h1>
-          <p class="max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">Комплексний аналіз правових ризиків, вирішення майнових спорів, сімейне право та надійне представництво в судових інстанціях. Гарантія повної адвокатської таємниці.</p>
-          <div class="grid grid-cols-2 gap-4 border-t border-slate-800/80 pt-4">
-            <div><h4 class="text-sm font-semibold text-slate-200">Майнові та цивільні спори</h4><p class="mt-1 text-xs text-slate-400">Поділ майна подружжя, визнання права власності, спадщина.</p></div>
-            <div><h4 class="text-sm font-semibold text-slate-200">Судове представництво</h4><p class="mt-1 text-xs text-slate-400">Підготовка позовів, апеляцій, представництво у судах м. Вінниці.</p></div>
-          </div>
-          <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="tel:+380677316946" class="rounded bg-amber-600 px-6 py-3.5 text-sm font-medium text-white shadow-lg shadow-amber-950/40 transition hover:bg-amber-500">Записатися на консультацію</a>
-            <a href="mailto:tgerasimishina@i.ua" class="rounded border border-slate-800 bg-slate-900 px-6 py-3.5 text-sm text-slate-300 transition hover:bg-slate-800">Надіслати документи</a>
+  <!-- Основний контент (Main) -->
+  <main class="max-w-6xl mx-auto px-6 py-12 lg:py-16 grid lg:grid-cols-12 gap-12 items-start">
+    
+    <!-- Ліва колонка: Текст та кнопки -->
+    <div class="lg:col-span-7 space-y-6 lg:pt-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs text-amber-400 font-medium">
+        <span class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></span>
+        Офіційна адвокатська діяльність
+      </div>
+      
+      <!-- Заголовок зі зміненим шрифтом (sans) -->
+      <h1 class="text-3xl md:text-5xl font-sans font-bold md:font-extrabold leading-tight text-white tracking-tight">
+        Професійний судовий захист та правовий супровід у Вінниці
+      </h1>
+      
+      <p class="text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+        Комплексний аналіз правових ризиків, вирішення майнових спорів, сімейне право та надійне представництво в судових інстанціях. Гарантія повної адвокатської таємниці.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800/80">
+        <div>
+          <h4 class="text-sm font-bold text-slate-200">Майнові та цивільні спори</h4>
+          <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">Поділ майна подружжя, визнання права власності, спадщина.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-slate-200">Судове представництво</h4>
+          <p class="text-xs text-slate-400 mt-1.5 leading-relaxed">Підготовка позовів, апеляцій, представництво у судах.</p>
+        </div>
+      </div>
+
+      <div class="pt-4 flex flex-wrap gap-4 items-center">
+        <a href="tel:+380677316946" class="px-6 py-3.5 bg-amber-600 hover:bg-amber-500 text-white font-semibold text-sm rounded-lg shadow-lg shadow-amber-950/40 transition">
+          Записатися на консультацію
+        </a>
+        <a href="mailto:tgerasimishina@i.ua" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800 text-sm font-medium rounded-lg transition">
+          Надіслати документи
+        </a>
+      </div>
+    </div>
+
+    <!-- Права колонка: Контакти -->
+    <div class="lg:col-span-5 bg-slate-900/60 p-6 md:p-8 rounded-2xl border border-slate-800/80 backdrop-blur-sm space-y-6 shadow-xl">
+      <!-- Заголовок контактів (sans) -->
+      <h3 class="text-lg font-sans font-bold text-white border-b border-slate-800 pb-3 tracking-wide">
+        Контактна інформація
+      </h3>
+      
+      <div class="space-y-5 text-sm">
+        <div>
+          <span class="text-slate-500 block text-xs uppercase tracking-widest font-semibold mb-1.5">Приймальня у Вінниці</span>
+          <p class="text-slate-200 text-base">вул. Келецька, 118</p>
+          
+          <!-- Інтерактивна мапа -->
+          <div class="mt-3 overflow-hidden rounded-xl border border-slate-700/50 relative">
+            <iframe 
+              src="https://maps.google.com/maps?q=Вінниця,%20вул.%20Келецька,%20118&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="200" 
+              frameborder="0" 
+              style="border:0;" 
+              allowfullscreen="" 
+              aria-hidden="false" 
+              tabindex="0"
+              class="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            </iframe>
           </div>
         </div>
-        <div class="space-y-6 rounded-2xl border border-slate-800/80 bg-slate-900/60 p-8 backdrop-blur-sm lg:col-span-5">
-          <h3 class="border-b border-slate-800 pb-3 font-serif text-lg text-white">Контактна інформація</h3>
-          <div class="space-y-4 text-sm">
-            <div><span class="block text-xs uppercase tracking-wider text-slate-500">Приймальня у Вінниці</span><p class="mt-0.5 text-slate-200">вул. Келецька, 118</p></div>
-            <div><span class="block text-xs uppercase tracking-wider text-slate-500">Прямий зв'язок</span><a href="tel:+380677316946" class="mt-0.5 block text-base font-medium text-amber-400 hover:underline">+38 (067) 731-69-46</a></div>
-            <div><span class="block text-xs uppercase tracking-wider text-slate-500">Електронна пошта</span><a href="mailto:tgerasimishina@i.ua" class="text-slate-300 hover:underline">tgerasimishina@i.ua</a></div>
-          </div>
-          <div class="rounded border border-slate-800 bg-slate-950/80 p-3.5 text-xs leading-normal text-slate-400">* Прийом проводиться за попереднім записом для конфіденційного обговорення справи.</div>
+        
+        <div>
+          <span class="text-slate-500 block text-xs uppercase tracking-widest font-semibold mb-1.5">Прямий зв'язок</span>
+          <a href="tel:+380677316946" class="text-amber-400 font-bold hover:text-amber-300 text-lg block transition">
+            +38 (067) 731-69-46
+          </a>
         </div>
-      </main>
-    </section>
-  </body>
+        
+        <div>
+          <span class="text-slate-500 block text-xs uppercase tracking-widest font-semibold mb-1.5">Електронна пошта</span>
+          <a href="mailto:tgerasimishina@i.ua" class="text-slate-300 hover:text-white transition block">
+            tgerasimishina@i.ua
+          </a>
+        </div>
+      </div>
+      
+      <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-400 leading-relaxed">
+        <span class="text-amber-500 font-bold">*</span> Прийом проводиться виключно за попереднім записом для гарантії конфіденційного обговорення вашої справи.
+      </div>
+    </div>
+    
+  </main>
+</body>
 </html>
+
 
 
