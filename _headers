@@ -1,0 +1,8 @@
+/site-v1.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/lady-justice-gold-v1.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/tetiana-portrait-dark-v1.webp
+  Cache-Control: public, max-age=31536000, immutable
