@@ -217,5 +217,11 @@
     }), { threshold: 0.14 });
     document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
   </script>
+  <script>
+    document.querySelectorAll('a[href*="t.me/"]').forEach((link) => {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+  </script>
 </body>
 </html>
