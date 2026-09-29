@@ -90,6 +90,7 @@
     .back-to-top svg { width: 1.8rem; height: 1.8rem; }
     .back-to-top:active { transform: scale(.94); }
     .back-to-top:focus-visible { outline: 2px solid #fceeb6; outline-offset: 3px; }
+    @media (max-width: 767px) { .back-to-top { bottom: calc(max(1.25rem, env(safe-area-inset-bottom)) + 6rem); } }
     @media (min-width: 768px) { .back-to-top { display: none !important; } }
     @media (prefers-reduced-motion: reduce) {
       .aurora { animation: none; }
