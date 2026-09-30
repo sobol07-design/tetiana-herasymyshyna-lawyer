@@ -63,8 +63,16 @@
     .aurora { animation: aurora 9s ease-in-out infinite alternate; }
     .aurora-delay { animation-delay: -4.5s; }
     .services-gradient {
-      background: linear-gradient(180deg, #260d2f 0%, #4c1649 14%, #6b1d59 34%, #f1ebf5 51%, #f1ebf5 100%);
-      background: linear-gradient(180deg in oklch, #260d2f 0%, #4c1649 14%, #6b1d59 34%, #f1ebf5 51%, #f1ebf5 100%);
+      background-color: #f1ebf5;
+      background-image:
+        url("/assets/grain.png"),
+        linear-gradient(180deg, #260d2f 0%, #4c1649 14%, #6b1d59 34%, #f1ebf5 51%, #f1ebf5 100%);
+      background-image:
+        url("/assets/grain.png"),
+        linear-gradient(180deg in oklch, #260d2f 0%, #4c1649 14%, #6b1d59 34%, #f1ebf5 51%, #f1ebf5 100%);
+      background-repeat: repeat, no-repeat;
+      background-size: 256px 256px, 100% 100%;
+      background-blend-mode: soft-light, normal;
     }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
