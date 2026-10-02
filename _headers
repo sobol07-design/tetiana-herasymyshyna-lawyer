@@ -15,3 +15,6 @@
 
 /assets/tetiana-portrait-dark-v1-640.webp
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/grain.webp
+  Cache-Control: public, max-age=31536000, immutable
