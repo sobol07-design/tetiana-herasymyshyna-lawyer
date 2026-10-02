@@ -84,30 +84,6 @@
     }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
-    .back-to-top {
-      position: fixed;
-      right: max(1.25rem, env(safe-area-inset-right));
-      bottom: calc(max(1.25rem, env(safe-area-inset-bottom)) + 6rem);
-      z-index: 50;
-      width: 3.75rem;
-      height: 3.75rem;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(213, 169, 66, .8);
-      border-radius: 9999px;
-      color: #fceeb6;
-      background: rgba(5, 17, 34, .82);
-      -webkit-backdrop-filter: blur(8px);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 6px 22px rgba(0, 0, 0, .24);
-      transition: background-color .2s ease, transform .2s ease;
-    }
-    .back-to-top:not([hidden]) { display: flex; }
-    .back-to-top svg { width: 1.8rem; height: 1.8rem; }
-    .back-to-top:active { transform: scale(.94); }
-    .back-to-top:focus-visible { outline: 2px solid #fceeb6; outline-offset: 3px; }
-    @media (max-width: 767px) { .back-to-top { bottom: calc(max(1.25rem, env(safe-area-inset-bottom)) + 6rem); } }
-    @media (min-width: 768px) { .back-to-top { display: none !important; } }
     @media (prefers-reduced-motion: reduce) {
       .aurora { animation: none; }
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -265,34 +241,11 @@
     </div>
     <p class="relative z-10 mx-auto max-w-6xl px-6 pb-6 text-xs text-white/60"><a href="https://tetiana-telegram-bot.vercel.app/privacy-policy.html" class="underline underline-offset-4 hover:text-gold">Політика приватності Telegram-бота</a></p>
   </footer>
-  <button class="back-to-top" type="button" aria-label="Прокрутити вгору" title="Вгору" hidden>
-    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 19V5m0 0L5.5 11.5M12 5l6.5 6.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
   <script>
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
     }), { threshold: 0.14 });
     document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
-  </script>
-  <script>
-    (() => {
-      const button = document.querySelector('.back-to-top');
-      const mobile = window.matchMedia('(max-width: 767px)');
-      let updateScheduled = false;
-      const update = () => {
-        if (updateScheduled) return;
-        updateScheduled = true;
-        requestAnimationFrame(() => {
-          const shouldShow = mobile.matches && window.scrollY >= 320;
-          if (button.hidden === shouldShow) button.hidden = !shouldShow;
-          updateScheduled = false;
-        });
-      };
-      window.addEventListener('scroll', update, { passive: true });
-      mobile.addEventListener('change', update);
-      button.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-      update();
-    })();
   </script>
   <script>
     document.querySelectorAll('a[href*="t.me/"]').forEach((link) => {
