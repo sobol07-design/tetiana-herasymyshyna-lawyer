@@ -3,3 +3,77 @@
 :root{--radius-card:12px;--radius-control:8px}
 .rounded-xl{border-radius:var(--radius-card)!important}
 .rounded-lg{border-radius:var(--radius-control)!important}
+
+/* Slow ambient light, confined to the hero behind its content. */
+.hero-glow{position:absolute;pointer-events:none;width:min(78vw,850px);height:min(75vw,720px);opacity:.48;animation:hero-light-drift 18s ease-in-out infinite alternate}
+.hero-glow-plum{left:-15%;top:-22%;background:radial-gradient(ellipse,rgba(231,152,220,.30),transparent 68%)}
+.hero-glow-gold{right:-12%;bottom:-32%;background:radial-gradient(ellipse,rgba(213,169,66,.22),transparent 68%);animation-duration:24s;animation-delay:-9s}
+@keyframes hero-light-drift{from{transform:translate3d(-3%,-3%,0);opacity:.38}to{transform:translate3d(14%,10%,0);opacity:.75}}
+@media(prefers-reduced-motion:reduce){.hero-glow{animation:none;opacity:.48}}
+/* Add alongside an element's existing button styles. */
+@property --orbit-glow-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.orbit-glow {
+  --orbit-gap: 4px;
+  --orbit-width: 1.5px;
+  --orbit-duration: 2.8s;
+  --orbit-highlight: #f2fcff;
+  --orbit-trail: #b6e7ffb3;
+  --orbit-fade: #b6e7ff30;
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+.orbit-glow::before,
+.orbit-glow::after {
+  content: '';
+  position: absolute;
+  inset: calc(0px - var(--orbit-gap));
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  padding: var(--orbit-width);
+  background: conic-gradient(
+    from var(--orbit-glow-angle),
+    transparent 0deg 255deg,
+    var(--orbit-fade) 295deg,
+    var(--orbit-trail) 330deg,
+    var(--orbit-highlight) 350deg,
+    transparent 360deg
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  transition: opacity 200ms ease;
+  animation: orbit-glow-travel var(--orbit-duration) linear infinite paused;
+}
+.orbit-glow::after { filter: blur(4px); }
+@keyframes orbit-glow-travel { to { --orbit-glow-angle: 360deg; } }
+@media (hover: hover) and (pointer: fine) {
+  .orbit-glow:hover::before,
+  .orbit-glow:hover::after {
+    opacity: 1;
+    animation-play-state: running;
+  }
+}
+.orbit-glow:focus-visible::before,
+.orbit-glow:focus-visible::after {
+  opacity: 1;
+  animation-play-state: running;
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-glow::before,
+  .orbit-glow::after {
+    animation: none;
+    --orbit-glow-angle: 45deg;
+    transition: none;
+  }
+}
+
+/* Warm light follows the existing gold palette. */
+.consultation-cta{--orbit-gap:3px;--orbit-duration:2.8s;--orbit-highlight:#fff8df;--orbit-trail:#fceeb6b3;--orbit-fade:#d5a94230;transition:background-color 180ms ease,box-shadow 180ms ease;transform:none!important}
+.consultation-cta:focus-visible{outline:2px solid #fceeb6;outline-offset:7px}
