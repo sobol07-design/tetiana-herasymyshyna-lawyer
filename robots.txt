@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.advokat-herasymyshyna.com.ua/sitemap.xml
+# Keep this file in sync with the site's public indexing rules.
